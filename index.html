@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>select to button</title>
+</head>
+<body>
+    <form class="form" action="http://www.w3schools.com">
+        <div class="form-group">
+          <select id="inputData" name="num" >
+            <option value="1">Bangladesh</option>
+            <option value="2">Bangladesh2</option>
+            <option value="3">Bangladesh3</option>
+            <option value="4">Bangladesh4</option>
+          </select>
+      
+
+          <input type="checkbox" id="check-box" name="vehicle1" value="1">
+
+
+
+         <button disabled id="button" >Button</button>
+        </div>
+      </form>
+
+
+
+
+      <script>
+
+const inputData=document.getElementById('inputData');
+const button=document.getElementById('button');
+const checkBox=document.getElementById('check-box');
+checkBox.addEventListener('click', function(){
+    checkBox.value=2;
+    if(inputData.value==2 && checkBox.value==2){
+    button.removeAttribute("disabled");
+   }else{
+    button.setAttribute("disabled");
+
+   }
+});
+
+
+
+      </script>
+</body>
+</html>
